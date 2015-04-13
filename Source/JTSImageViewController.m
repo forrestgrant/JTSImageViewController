@@ -17,7 +17,7 @@
 ///--------------------------------------------------------------------------------------------------------------------
 
 // Public Constants
-CGFloat const JTSImageViewController_DefaultAlphaForBackgroundDimmingOverlay = 0.66f;
+CGFloat const JTSImageViewController_DefaultAlphaForBackgroundDimmingOverlay = 1.0f;
 CGFloat const JTSImageViewController_DefaultBackgroundBlurRadius = 2.0f;
 
 // Private Constants
@@ -419,7 +419,7 @@ typedef struct {
     self.view.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
     
     self.blackBackdrop = [[UIView alloc] initWithFrame:CGRectInset(self.view.bounds, -512, -512)];
-    self.blackBackdrop.backgroundColor = [UIColor blackColor];
+    self.blackBackdrop.backgroundColor = [UIColor whiteColor];
     self.blackBackdrop.alpha = 0;
     [self.view addSubview:self.blackBackdrop];
     
